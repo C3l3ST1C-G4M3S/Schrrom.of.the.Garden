@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Schroom of the Garden</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 1rem;
+      background: #f2f2f2;
+      font-family: sans-serif;
+    }
+
+    p {
+      text-align: center;
+    }
+
+    canvas {
+      display: block;
+      margin: 1rem auto;
+      max-width: 100%;
+      border: 2px solid #333;
+      background: #dff3ff;
+    }
+  </style>
+
+  <!-- defer waits until the HTML has loaded before running game.js -->
+  <script src="game.js" defer></script>
+</head>
+
+<body>
+  <p>Move: ← → or A/D &nbsp; Jump: ↑ or W &nbsp; Attack: Space &nbsp; Restart: R</p>
+
+  <canvas id="game" width="800" height="400"></canvas>
+</body>
+</html>
