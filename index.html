@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1d1a16">
+  <title>Schro - Begin Dimension</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      padding: 16px;
+      background: #1d1a16;
+      color: #c7c1b3;
+      font-family: fantasy;
+    }
+
+    h1,
+    p {
+      text-align: center;
+    }
+
+    h1 {
+      margin: 8px 0;
+    }
+
+    p {
+      line-height: 1.5;
+    }
+
+    .game {
+      width: min(100%, 900px);
+      margin: 0 auto;
+    }
+
+    canvas {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin: 16px auto;
+      border: 2px solid #0c0c09;
+      background: #151610;
+      touch-action: none;
+    }
+
+    .touch-controls {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      margin: 12px auto;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: none;
+    }
+
+    .touch-group {
+      display: flex;
+      gap: 10px;
+    }
+
+    .touch-controls button {
+      min-width: 62px;
+      min-height: 54px;
+      border: 2px solid #c7c1b3;
+      border-radius: 10px;
+      background: #342f28;
+      color: #fff;
+      font: bold 20px sans-serif;
+      touch-action: none;
+    }
+
+    .touch-controls button:active {
+      background: #598447;
+    }
+
+  </style>
+  <script src="game.js" defer></script>
+</head>
+<body>
+  <main class="game">
+    <h1>Schro</h1>
+    <p>
+      Controls: ← → or A / D to move, ↑ or W to jump, Space to attack.
+      <br>
+      Click the game to use your keyboard, or use the buttons below. Defeat the garden boss, then walk through the gate. Press R to restart.
+    </p>
+    <canvas id="game" width="900" height="500" tabindex="0" aria-label="Schro game"></canvas>
+    <nav class="touch-controls" aria-label="Touch game controls">
+      <div class="touch-group">
+        <button type="button" data-key="arrowleft" aria-label="Move left">←</button>
+        <button type="button" data-key="arrowright" aria-label="Move right">→</button>
+      </div>
+      <div class="touch-group">
+        <button type="button" data-key="arrowup" aria-label="Jump">↑</button>
+        <button type="button" data-action="attack" aria-label="Attack">⚔</button>
+      </div>
+    </nav>
+  </main>
+</body>
+</html>
